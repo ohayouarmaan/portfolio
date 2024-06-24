@@ -47,13 +47,26 @@ function Cube({position, color}: {position: number[], color?: string}) {
     )
 }
 
-export default function Hero() {
+export default function Hero({setShouldExpand}: {setShouldExpand: Function}) {
    return (<div className="flex w-full h-[90vh]">
     <div className="flex flex-col items-center justify-center p-5 w-[50%]">
         <div className="flex flex-col items-start">
             <h1 className="font-bold text-[4rem]">Hey Everybody!</h1>
             <h1 className="text-neutral-300 text-[2rem]">my name is Armaan and I code.</h1>
             <h3 className="text-neutral-400 text-[1.2rem]">ps: I sometimes make music as well</h3>
+            <h3 className="text-neutral-400 text-[1.2rem]">You can check out the following :D</h3>
+            <div className="flex gap-5">
+                <a onMouseEnter={() => {
+                    setShouldExpand(true)
+                }} onMouseLeave={() => {
+                    setShouldExpand(false)
+                }} className="inline-block border-2 border-white hover:bg-white hover:text-black transition px-4 py-2 mt-3 rounded-md">Projects</a>
+                <a onMouseEnter={() => {
+                    setShouldExpand(true)
+                }} onMouseLeave={() => {
+                    setShouldExpand(false)
+                }} className="inline-block border-2 border-white hover:bg-white hover:text-black transition px-4 py-2 mt-3 rounded-md">Resume</a>
+            </div>
         </div>
     </div>
     <div className="flex flex-col w-[50%] items-start">

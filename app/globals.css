@@ -6,3 +6,7 @@
 * {
     font-family: "Share Tech Mono", mono;
 }
+
+body {
+    overflow: hidden;
+}
