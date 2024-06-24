@@ -12,6 +12,7 @@ export default function Home() {
     <main className="bg-black text-white min-h-screen w-full">
         <Navbar />
         <Hero setShouldExpand={setShouldExpand} />
+        <Hero setShouldExpand={setShouldExpand} />
         <MouseTracker shouldExpand={shouldExpand} />
     </main>
   );
